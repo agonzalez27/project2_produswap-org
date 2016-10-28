@@ -7,12 +7,12 @@ In the area in which I live, many families grow a variety produce in their back 
 
 ###Wire Frames 
 ![page 1]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide1.png "Page 1")
-![page 2]( Slide2.png "Page 2")
-![page 3]( Slide3.png "Page 3")
-![page 4]( Slide4.png "Page 4")
-![page 5]( Slide5.png "Page 5")
-![page 6]( Slide6.png "Page 6")
-![page 7]( Slide7.png "Page 7")
+![page 2]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide2.png "Page 2")
+![page 3]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide3.png "Page 3")
+![page 4]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide4.png "Page 4")
+![page 5]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide5.png "Page 5")
+![page 6]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide6.png "Page 6")
+![page 7]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/Slide7.png "Page 7")
 
 ###ERD
-![ERD]( erd.JPG "ERD")
+![ERD]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/erd.JPG "ERD")
