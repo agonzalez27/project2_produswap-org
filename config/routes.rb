@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   # get 'users/:id/edit' => 'users#edit', as: :edit_user
   # patch 'users/:id' => 'users#update'
   # delete 'users/:id' => 'users#destroy'
+
   resources :users do
 	resources :posts do
-		resources :messages
-end
+	resources :messages
+  end
 	end
-		end
+  get '/login'     => 'sessions#new'
+  post '/login'    => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+end

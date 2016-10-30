@@ -1,10 +1,5 @@
 class User < ApplicationRecord
-  def password=(word)
-  self.password_digest = "$2a$10$djkCu..."
-  @password = word
-  end
 
-  def password_confirmation=(word)
-  @password_confirmation = word
-  end
+  has_secure_password 
+
 end
