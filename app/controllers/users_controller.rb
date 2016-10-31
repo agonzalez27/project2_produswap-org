@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    p "look here"
+    p current_user
     @user = User.find(params[:id])
   end
 
@@ -35,9 +37,14 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy 
-    User.find(params[:id]).destroy
-    redirect_to new_user_path
+  def destroy
+    @user = User.find(params[:id])
+    if current_user == @user
+      @user.destroy
+      redirect_to new_user_path
+    else
+      redirect_to current_user
+    end
   end
 
 private

@@ -3,6 +3,9 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
+      <div id="name">
+        <%= post.user.first_name %> <%= post.user.last_name %>
+      </div>
       <div id="summary">
       <%= post.summary %>
       </div>
