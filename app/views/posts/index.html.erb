@@ -1,0 +1,18 @@
+<h1>Welcome to produswap.org</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <div id="summary">
+      <%= post.author %>
+      </div>
+      <div id="content">
+      <%= post.subject %>
+      </div>
+    </li>
+    <%= link_to "Edit Post", edit_user_post_path(post) %>
+    <%= link_to "Delete Post!", post, method: :delete, data: {confirm: "Sure delete Post?"} %>
+  <% end %>
+</ul>
+
+  <%= link_to "New Post!", new_user_post_path %>
