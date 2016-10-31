@@ -12,6 +12,9 @@
       <div id="content">
       <%= post.content %>
       </div>
+      <div id="time_date">
+      <%= post.created_at %>
+      </div>
     </li>
     <%= link_to "Edit Post", edit_user_post_path(current_user, post) %>
   <% end %>
