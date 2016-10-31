@@ -2,4 +2,6 @@
 
 <%= render 'form'  %>
 
+<%= link_to "Delete Post!", ([current_user, @post]), method: :delete, data: {confirm: "Sure delete Post?"} %>
+
 <%= link_to "Back to Posts", user_posts_path %>

@@ -11,7 +11,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params.require(:post).permit(:content, :summary))
+    @user = User.find(session[:user_id])
+    @post = @user.posts.new(params.require(:post).permit(:content, :summary))
     if @post.save
       redirect_to user_posts_path
     else

@@ -4,14 +4,13 @@
   <% @posts.each do |post| %>
     <li>
       <div id="summary">
-      <%= post.author %>
+      <%= post.summary %>
       </div>
       <div id="content">
-      <%= post.subject %>
+      <%= post.content %>
       </div>
     </li>
-    <%= link_to "Edit Post", edit_user_post_path(post) %>
-    <%= link_to "Delete Post!", post, method: :delete, data: {confirm: "Sure delete Post?"} %>
+    <%= link_to "Edit Post", edit_user_post_path(current_user, post) %>
   <% end %>
 </ul>
 
