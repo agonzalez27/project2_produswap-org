@@ -1,0 +1,42 @@
+<div>
+<%= @post.user.first_name %> <%= @post.user.last_name %>
+</div>
+<div>
+<%= @post.summary %>
+</div>
+<div>
+<%= @post.content %>
+</div>
+<div>
+<%= @post.created_at %>
+</div>
+
+<%= form_for([@user, @post, @message]) do |f| %>
+<div>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+</div>
+
+<%= f.submit %>
+<% end %>
+
+<ul>
+  <% @post.messages.each do |message| %>
+    <li>
+      <div id="message_name">
+        <%= message.post.user.first_name %> <%= message.post.user.last_name %>
+      </div>
+      <div id="content">
+        <%= message.content %>
+      </div>
+      <div>
+        <%= message.created_at %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+<%= link_to "Edit Post", edit_user_post_path(current_user, @post) %>

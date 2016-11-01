@@ -8,15 +8,12 @@
       </div>
       <div id="summary">
       <%= post.summary %>
-      </div>
-      <div id="content">
-      <%= post.content %>
-      </div>
       <div id="time_date">
       <%= post.created_at %>
       </div>
+      <%= link_to "More Info", user_post_path(post.user, post) %>
     </li>
-    <%= link_to "Edit Post", edit_user_post_path(current_user, post) %>
+
   <% end %>
 </ul>
 
