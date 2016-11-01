@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @user = User.find(session[:user_id])
     @post = @user.posts.new(params.require(:post).permit(:content, :summary))
     if @post.save
-      redirect_to user_posts_path
+      redirect_to post_page_path
     else
       render :new
     end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(params.require(:post).permit(:content, :summary))
-      redirect_to user_posts_path
+      redirect_to post_page_path
     else
       render :edit
     end
@@ -40,6 +40,6 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to user_posts_path
+    redirect_to post_page_path
   end
 end

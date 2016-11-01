@@ -3,19 +3,23 @@
 <%= link_to 'My Profile', user_path(current_user) %>
 Welcome: <%= current_user.first_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
 </div>
+<%= link_to 'About', about_path(current_user) %>
 
 <h1>Welcome to produswap.org</h1>
 
+<h3>Current Swaps in Ventura County:</h3>
+<div>
   <% @posts.each do |post| %>
-      <div id="name">
-        <%= post.user.first_name %> <%= post.user.last_name %>
-      </div>
-      <div id="summary">
-      <%= post.summary %>
-      <div id="time_date">
-      <%= post.created_at %>
-      </div>
-     <div>
-      <%= link_to "More Info", user_post_path(post.user, post) %>
+    <div id="name">
+      <%= post.user.first_name %> <%= post.user.last_name %>
+    </div>
+    <div id="summary">
+    <%= post.summary %>
+    <div id="time_date">
+    <%= post.created_at %>
+    </div>
+   <div>
+    <%= link_to "More Info", user_post_path(post.user, post) %>
   <% end %>
     </div>
+</div>

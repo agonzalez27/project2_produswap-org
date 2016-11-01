@@ -1,11 +1,11 @@
 <%= form_for ([current_user, @post]) do |f| %>
   <div>
     <%= f.label :summary %>
-    <%= f.text_field :summary %>
+    <%= f.text_field :summary, required: true, placeholder: "summary"%>
   </div>
   <div>
     <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= f.text_field :content, required: true, placeholder: "content" %>
   </div>
 
   <%= f.submit %>
