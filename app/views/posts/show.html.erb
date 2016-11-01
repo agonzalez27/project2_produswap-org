@@ -13,16 +13,18 @@
 
 <%= form_for([@user, @post, @message]) do |f| %>
 <div>
-  <%= f.label :content %>
+  <%= f.label :message %>
   <%= f.text_field :content %>
+</div>
+<div>
+  <%= f.hidden_field :recipient, :value => @post.user.id %>
 </div>
 
 <%= f.submit %>
 <% end %>
 
-<ul>
   <% @post.messages.each do |message| %>
-    <li>
+    <% if message.user == current_user || message.recipient == current_user.id %>
       <div id="message_name">
         <%= message.user.first_name %> <%= message.user.last_name %>
       </div>
@@ -32,11 +34,22 @@
       <div>
         <%= message.created_at %>
       </div>
-    </li>
+      <%= form_for([@user, @post, @message]) do |f| %>
+      <div>
+        <%= f.label :reply %>
+        <%= f.text_field :content %>
+      </div>
+      <div>
+        <%= f.hidden_field :recipient, :value => message.user.id %>
+      </div>
+
+      <%= f.submit %>
+      <% end %>
+    <% end %>
   <% end %>
-</ul>
 
 
 
 
 <%= link_to "Edit Post", edit_user_post_path(current_user, @post) %>
+<%= link_to "Back to Swaps", post_page_path(current_user) %>

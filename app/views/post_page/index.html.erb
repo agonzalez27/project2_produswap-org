@@ -1,0 +1,21 @@
+<div>
+<%= link_to "New Post!", new_user_post_path(current_user) %>
+<%= link_to 'My Profile', user_path(current_user) %>
+Welcome: <%= current_user.first_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
+</div>
+
+<h1>Welcome to produswap.org</h1>
+
+  <% @posts.each do |post| %>
+      <div id="name">
+        <%= post.user.first_name %> <%= post.user.last_name %>
+      </div>
+      <div id="summary">
+      <%= post.summary %>
+      <div id="time_date">
+      <%= post.created_at %>
+      </div>
+     <div>
+      <%= link_to "More Info", user_post_path(post.user, post) %>
+  <% end %>
+    </div>

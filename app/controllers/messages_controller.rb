@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
   def create
     @user = current_user
     @post = Post.find(params[:post_id])
-    @message = Message.new(params.require(:message).permit(:content))
+    @message = Message.new(params.require(:message).permit(:content, :recipient))
     @message.user = @user
     @message.post = @post
     if @message.save

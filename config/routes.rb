@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-root 'users#index'
+  root 'sessions#landing'
+  # post '/' => 'sessions#create_zip'
+  get '/post_page' => 'post_page#index' 
   resources :users do
 	   resources :posts do
 	      resources :messages
@@ -9,4 +11,6 @@ root 'users#index'
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
+  # get '/zip' => 'sessions#landing'
+  # post '/zip' => 'sessions#create_zip'
 end

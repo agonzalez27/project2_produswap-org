@@ -16,9 +16,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.zip_code = session[:zip_code]
     if @user.save
       session[:user_id] = @user.id.to_s
-      redirect_to users_path
+      redirect_to post_page_path
     else
       render :new
     end
