@@ -24,7 +24,7 @@
   <% @post.messages.each do |message| %>
     <li>
       <div id="message_name">
-        <%= message.post.user.first_name %> <%= message.post.user.last_name %>
+        <%= message.user.first_name %> <%= message.user.last_name %>
       </div>
       <div id="content">
         <%= message.content %>
