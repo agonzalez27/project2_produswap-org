@@ -9,9 +9,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    p "look here"
-    p current_user
+    # p "look here"
+    # p current_user
+    if current_user != @user
+      redirect_to post_page_path
+    else
     @user = User.find(params[:id])
+  end
   end
 
   def create
