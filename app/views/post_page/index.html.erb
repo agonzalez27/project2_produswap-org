@@ -1,7 +1,7 @@
 <div>
 <%= link_to "New Post!", new_user_post_path(current_user) %>
 <%= link_to 'My Profile', user_path(current_user) %>
-Welcome: <%= current_user.first_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
+Welcome <%= current_user.first_name %> <%= link_to 'Log Out', logout_path, method: :delete %>
 </div>
 <%= link_to 'About', about_path(current_user) %>
 
