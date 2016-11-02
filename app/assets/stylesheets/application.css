@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  text-align: center;
+  color: white;
+  background-color: green;
+  background-image: url(http://d3qibrsw27dlm.cloudfront.net/wp-content/uploads/2014/06/produce-3.jpg);
+ }
+ div {
+   height: auto;
+   width: auto;
+   border: 2px solid black;
+ }
+
+ #aboutTitle {
+   background-color: red;
+   color: rgba(255, 255, 255, 0.8);
+   /*color: black;*/
+   font-size: 60px;
+   font-family: arial black;
+ }
+
+
+ .navbar {
+   height: 50px;
+   width: 100px;
+   display: inline-block;
+ }
+
+ #nav {
+   display: inline-block;
+ }
+
+ #welcome {
+   width: 150px;
+ }

@@ -8,30 +8,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav>
-      <div id="about">
+    <nav id="nav">
+      <div class ="navbar" id="about">
       <%= link_to 'About', about_path(current_user) %>
-      </div>
-      <div id="home">
-      <%= link_to 'produswap.org', root_path  %>
-      </div>
-      <div id="newSwap">
+    </div>
+    
        <% if current_user %>
-       <%= link_to 'New Swap', new_user_post_path(current_user) %>
+      <div class ="navbar" id="swaps">
+       <%= link_to 'Swaps', post_page_path(current_user) %>
        <% end %>
        </div>
-       <div id="welcome">
+
        <% if current_user %>
+        <div class ="navbar" id="welcome">
        Welcome <%= current_user.first_name %>
        <% end %>
        </div>
-       <div id="logout">
+
        <% if current_user %>
+       <div class ="navbar" id="logout">
         <%= link_to 'Log Out', logout_path, method: :delete %>
         <% end %>
         </div>
-        <div id="myProfile">
+
         <% if current_user %>
+          <div class ="navbar" id="myProfile">
         <%= link_to 'My Profile', user_path(current_user) %>
         <% end %>
         </div>
