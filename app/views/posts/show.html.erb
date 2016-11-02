@@ -1,11 +1,12 @@
+<!-- post info -->
 <div>
-<%= @post.user.first_name %> <%= @post.user.last_name %>
+Name: <%= @post.user.first_name %> <%= @post.user.last_name %>
 <br>
-<%= @post.summary %>
+Swap Info: <%= @post.summary %>
 <br>
-<%= @post.content %>
+Availability: <%= @post.content %>
 <br>
-<%= @post.created_at %>
+Post date/time: <%= @post.created_at %>
 </div>
 
 <br>
@@ -27,8 +28,9 @@
 
 <br>
 <!-- #displays message -->
-<div>
+
   <% @post.messages.each do |message| %>
+    <div>
     <% if message.user == current_user || message.recipient == current_user.id %>
       <br>
       <%= message.user.first_name %> <%= message.user.last_name %>
@@ -47,7 +49,6 @@
           <br>
           <%= reply.created_at %>
           <br>
-
         <% end %>
         <%= form_for([@user, @post, message, @reply]) do |f| %>
           <br>
@@ -55,7 +56,7 @@
           <br>
             <%= f.hidden_field :recipient, :value => message.user.id %>
           <%= f.submit %>
+          </div>
       <% end %>
     <% end %>
   <% end %>
-</div>

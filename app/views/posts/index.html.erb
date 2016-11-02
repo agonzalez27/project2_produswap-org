@@ -1,20 +1,15 @@
 <h1>Welcome to produswap.org</h1>
 
-<ul>
   <% @posts.each do |post| %>
-    <li>
-      <div id="name">
+      <div>
         <%= post.user.first_name %> <%= post.user.last_name %>
-      </div>
-      <div id="summary">
+      <br>
       <%= post.summary %>
-      <div id="time_date">
+      <br>
       <%= post.created_at %>
-      </div>
+      <br>
       <%= link_to "More Info", user_post_path(post.user, post) %>
-    </li>
-
+    </div>
   <% end %>
-</ul>
 
   <%= link_to "New Post!", new_user_post_path %>
