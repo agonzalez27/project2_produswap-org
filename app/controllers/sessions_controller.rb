@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
+skip_before_filter :require_login
   def new
+    # if current_user
+    #   redirect_to post_page_path
+    # end
   end
 
   def create
