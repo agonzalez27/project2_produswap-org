@@ -39,13 +39,22 @@
       <br>
 
     <!-- #reply form -->
-    <%= form_for([@user, @post, @message]) do |f| %>
-      <br>
-        <%= f.text_field :content, required: true, placeholder: "reply" %>
-      <br>
-        <%= f.hidden_field :recipient, :value => message.user.id %>
-      <%= f.submit %>
+      <% message.replies.each do |reply| %>
+          <br>
+          <%= reply.user.first_name %> <%= reply.user.last_name %>
+          <br>
+          <%= reply.content %>
+          <br>
+          <%= reply.created_at %>
+          <br>
 
+        <% end %>
+        <%= form_for([@user, @post, message, @reply]) do |f| %>
+          <br>
+            <%= f.text_field :content, required: true, placeholder: "reply" %>
+          <br>
+            <%= f.hidden_field :recipient, :value => message.user.id %>
+          <%= f.submit %>
       <% end %>
     <% end %>
   <% end %>

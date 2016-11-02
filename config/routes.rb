@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get '/about' => 'about#index'
   resources :users do
 	   resources :posts do
-	      resources :messages
+	      resources :messages do
+	        resources :replies
+	      end
     end
 	end
   get '/login'     => 'sessions#new'

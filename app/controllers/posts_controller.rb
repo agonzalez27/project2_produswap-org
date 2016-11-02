@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @message = Message.new
+    @reply = Reply.new 
     @post = Post.find(params[:id])
   end
 
