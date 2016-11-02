@@ -9,20 +9,32 @@
   </head>
   <body>
     <nav>
+      <div id="about">
       <%= link_to 'About', about_path(current_user) %>
+      </div>
+      <div id="home">
       <%= link_to 'produswap.org', root_path  %>
+      </div>
+      <div id="newSwap">
        <% if current_user %>
        <%= link_to 'New Swap', new_user_post_path(current_user) %>
        <% end %>
+       </div>
+       <div id="welcome">
        <% if current_user %>
        Welcome <%= current_user.first_name %>
        <% end %>
+       </div>
+       <div id="logout">
        <% if current_user %>
         <%= link_to 'Log Out', logout_path, method: :delete %>
         <% end %>
+        </div>
+        <div id="myProfile">
         <% if current_user %>
         <%= link_to 'My Profile', user_path(current_user) %>
         <% end %>
+        </div>
     </nav>
     <%= yield %>
   </body>
