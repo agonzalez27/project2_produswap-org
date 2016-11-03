@@ -6,7 +6,7 @@
 
 <div id="editDeleteBack">
   <div id="editDelete">
-    <%= link_to "Delete Swap", ([current_user, @post]), method: :delete, data: {confirm: "Sure delete Post?"} %>
+    <%= link_to "Delete Swap", ([current_user, @post]), method: :delete, data: {confirm: "Are you sure?"} %>
   </div>
   <div id="editBack">
     <%= link_to "Back", user_post_path(current_user, @post) %>
