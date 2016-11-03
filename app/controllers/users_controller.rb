@@ -20,7 +20,6 @@ skip_before_filter :require_login
 
   def create
     @user = User.new(user_params)
-    @user.zip_code = session[:zip_code]
     if @user.save
       session[:user_id] = @user.id.to_s
       redirect_to post_page_path
