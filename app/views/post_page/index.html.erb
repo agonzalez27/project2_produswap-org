@@ -1,15 +1,13 @@
-
-
 <div id="newSwap">
  <%= link_to 'New Swap', new_user_post_path(current_user) %>
  </div>
 
+<div id="swapNearmeNear">
 <div id="swapsNear">
-Swaps Near Me:
+Swaps Near Me
 </div>
-
   <% @posts.each do |post| %>
-    <div class="swapSum">
+    <div id="swapNearMe" class="swapSum">
     <br>
     Name: <%= post.user.first_name %> <%= post.user.last_name %>
     <br>
@@ -22,3 +20,24 @@ Swaps Near Me:
     <%= link_to "More Info", user_post_path(post.user, post) %>
     </div>
   <% end %>
+</div>
+
+  <div id="swapsNearNear">
+  <div id="swapsNear">
+  My Swaps
+  </div>
+  <% current_user.posts.each do |post| %>
+    <div id="mySwaps" class="swapSum">
+    <br>
+    Name: <%= post.user.first_name %> <%= post.user.last_name %>
+    <br>
+    Summary: <%= post.summary %>
+    <!-- <br>
+    Zip: <%#= post.user.zip_code %> -->
+    <br>
+    Swap Date/Time: <%= post.created_at %>
+    <br>
+    <%= link_to "More Info", user_post_path(post.user, post) %>
+    </div>
+  <% end %>
+  </div>

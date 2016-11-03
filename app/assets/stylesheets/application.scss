@@ -434,3 +434,32 @@
   margin-left: auto;
   margin-bottom: 30px;
 }
+
+#mySwaps {
+  width: 400px;
+  display: block;
+  font-size: 20px;
+}
+
+#swapNearMe {
+  width: 400px;
+  display: block;
+  font-size: 20px;
+}
+
+#swapNearmeNear {
+  display: block;
+  float: left;
+  height: auto;
+  margin-left: 200px;
+  margin-top: 40px;
+  border: none;
+}
+#swapsNearNear{
+  display: block;
+  float: right;
+  height: auto;
+  margin-right: 200px;
+  margin-top: 40px;
+  border: none;
+}
