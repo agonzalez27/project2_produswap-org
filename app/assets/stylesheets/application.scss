@@ -130,16 +130,16 @@
 }
 
 #loginLogin {
-  font-size: 60px;
-  color: blue;
   border: none;
-  width: 300px;
-  height: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 30px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
   margin-right: auto;
   margin-left: auto;
-  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
 }
 
 .loginPage {
@@ -195,15 +195,8 @@
 }
 
 #rules {
-  height: auto;
-  width: 800px;
-  font-size: 20px;
-  background-color: rgba(255,255,255,.5);
-  margin-right: auto;
-  margin-left: auto;
   text-align: left;
   margin-top: 10px;
-  border: none;
 }
 
 #swapsNear {
@@ -312,4 +305,119 @@
   color: rgba(51,147,218,1);
   margin-right: auto;
   margin-left: auto;
+}
+
+#newSwapNew {
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 50px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+
+}
+#backSwapNew {
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 20px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+#profileTitle {
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 50px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+#editDeleteSwap {
+  display: inline-block;
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 30px
+}
+#editProfile {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-right: 30px;
+  width: auto;
+  height: auto;
+
+}
+#deleteProfile {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-right: 30px;
+  width: auto;
+  height: auto;
+}
+#swapsProfile {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-right: 30px;
+  width: auto;
+  height: auto;
+}
+
+#editUser {
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 30px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+#aboutAbout {
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 30px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+#backProduswap {
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 30px;
+  font-size: 40px;
+  color: rgba(51,147,218,1);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
 }

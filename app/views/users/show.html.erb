@@ -1,17 +1,25 @@
 
-  <h1><%= @user.first_name %>'s Profile</h1>
-  <div>
-  Name: <%= @user.first_name %> <%= @user.last_name %>
-  </div>
-  <div>
-  Email: <%= @user.email %>
-  </div>
-  <div>
-  Zip Code: <%= @user.zip_code %>
-  </div>
 
-  <%#= link_to 'Back to the list!', users_path %>
+<div id="profileTitle">
+  <%= @user.first_name %>'s Profile
+</div>
+<div class="swapSum">
+  Name: <%= @user.first_name %> <%= @user.last_name %>
   <br>
+  Email: <%= @user.email %>
+  <br>
+  Zip Code: <%= @user.zip_code %>
+  <br>
+</div>
+
+<div id="editDeleteSwap">
+  <div id="editProfile">
   <%= link_to 'Edit', edit_user_path(current_user) %>
-  <%= link_to 'Delete your account', @user, method: :delete, data: {confirm: 'Are you sure?'} %>
-  <%= link_to 'Back to Swaps', post_page_path(current_user) %>
+  </div>
+  <div id="deleteProfile">
+  <%= link_to 'Delete', @user, method: :delete, data: {confirm: 'Are you sure?'} %>
+  </div>
+  <div id="swapsProfile">
+  <%= link_to 'Swaps', post_page_path(current_user) %>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <%= form_for @user do |f| %>
-  <div class="signUpPage">
+  <div class="swapSum">
     <%= f.label :first_name %>
     <%= f.text_field :first_name%>
     <br>
@@ -19,10 +19,12 @@
     <%= f.text_field :zip_code%>
     <br>
     <div id="rules">
+      <h2>User Agreement</h2>
+      <br>
       <ul>
         <li>I will not swap stolen produce.</li>
-        <li>I will not user harmful chemicals on my produce.</li>
-        <li>I will swap high quality produce.</li>
+        <li>I will not use harmful chemicals on my produce.</li>
+        <li>I will only swap high quality produce.</li>
         <li>I will be brief and kind in messages, replies, and during swaps.</li>
         <li>I will schedule swaps at open and well lit spaces.</li>
         <li>I will only swap produce for produce and not accept any other type of payment.</li>
@@ -31,7 +33,7 @@
 
     </div>
     <%= f.label :accept %>
-    <%= f.check_box :rules%>
+    <%= f.check_box :rules, required: true %>
     <br>
     <%= f.submit 'Sign Up', class: "btn btn-primary" %>
   </div>
