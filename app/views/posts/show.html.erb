@@ -1,5 +1,5 @@
 <!-- post info -->
-<div>
+<div class="swapSum">
 Name: <%= @post.user.first_name %> <%= @post.user.last_name %>
 <br>
 Swap Info: <%= @post.summary %>
@@ -16,13 +16,13 @@ Post date/time: <%= @post.created_at %>
 <%= link_to "Back to Swaps", post_page_path(current_user) %>
 <br>
 
-<div>
+<div class="swapSum">
 <!-- #form to send message to post author -->
 <%= form_for([@user, @post, @message]) do |f| %>
 <%= f.text_field :content, required: true, placeholder: "message" %>
 <%= f.hidden_field :recipient, :value => @post.user.id %>
 <br>
-<%= f.submit %>
+<%= f.submit 'send', class: "btn btn-primary" %>
 <% end %>
 </div>
 
@@ -31,7 +31,7 @@ Post date/time: <%= @post.created_at %>
 
   <% @post.messages.each do |message| %>
     <% if message.user == current_user || message.recipient == current_user.id %>
-      <div>
+      <div class="swapSum">
       <br>
       <%= message.user.first_name %> <%= message.user.last_name %>
       <br>
@@ -55,7 +55,7 @@ Post date/time: <%= @post.created_at %>
             <%= f.text_field :content, required: true, placeholder: "reply" %>
           <br>
             <%= f.hidden_field :recipient, :value => message.user.id %>
-          <%= f.submit %>
+          <%= f.submit 'reply', class: "btn btn-primary" %>
           </div>
       <% end %>
     <% end %>

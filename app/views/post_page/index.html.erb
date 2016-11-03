@@ -4,18 +4,20 @@
  <%= link_to 'New Swap', new_user_post_path(current_user) %>
  </div>
 
-<h3>Current Swaps in Ventura County:</h3>
+<div id="swapsNear">
+Swaps Near Me:
+</div>
 
   <% @posts.each do |post| %>
-    <div>
+    <div class="swapSum">
     <br>
     Name: <%= post.user.first_name %> <%= post.user.last_name %>
     <br>
     Summary: <%= post.summary %>
+    <!-- <br>
+    Zip: <%#= post.user.zip_code %> -->
     <br>
-    Zip: <%= post.user.zip_code %>
-    <br>
-    Post date/time: <%= post.created_at %>
+    Swap Date/Time: <%= post.created_at %>
     <br>
     <%= link_to "More Info", user_post_path(post.user, post) %>
     </div>
