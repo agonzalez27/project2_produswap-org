@@ -1,18 +1,26 @@
-<h1>Log In</h1>
+<div id="loginLogin">
+Log In
+</div>
+
 <%= form_for :login do |f| %>
-  <div>
+  <div class="loginPage">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
-  <div>
+  <div class="loginPage">
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
-  <div>
+  <div class="loginPage">
     <%= f.submit 'Log In' %>
   </div>
 <% end %>
 
+<div id="loginNav">
+<div id="SignUpLogInPage">
 <%= link_to 'Sign Up', new_user_path %>
-
-<%= link_to 'Back to produswap.org', root_path  %>
+</div>
+<div id="back">
+<%= link_to 'Back', root_path  %>
+</div>
+</div>

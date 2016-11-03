@@ -14,11 +14,13 @@
  *= require_self
  */
 
+
  body {
   text-align: center;
   background-color: white;
   background-image: url(produce.png);
   background-size: cover;
+  background-repeat: no-repeat;
  }
 
  div {
@@ -82,7 +84,6 @@
   margin-right: 30px;
   width: 200px;
   height: auto;
-  border-radius: 25px;
 }
 
 #signUpLanding {
@@ -93,5 +94,51 @@
   margin-left: 30px;
   width: 200px;
   height: auto;
-  border-radius: 25px;
+}
+
+/*log in page */
+#loginNav {
+  display: inline-block;
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 50px;
+}
+
+#SignUpLogInPage {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-left: 30px;
+  width: 200px;
+  height: auto;
+}
+
+#back {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-left: 30px;
+  width: 200px;
+  height: auto;
+}
+
+#loginLogin {
+  font-size: 60px;
+  color: blue;
+  border: none;
+  width: 300px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.loginPage {
+  font-size: 30px;
 }
