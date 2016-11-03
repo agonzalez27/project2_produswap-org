@@ -1,13 +1,11 @@
 <%= form_for ([current_user, @post]) do |f| %>
-  <div>
+  <div class="swapSum">
     <%= f.label :summary %>
     <%= f.text_field :summary, required: true, placeholder: "summary"%>
-  </div>
-  <div>
+    <br>
     <%= f.label :availability %>
     <%= f.text_field :content, required: true, placeholder: "availability" %>
+    <br>
+  <%= f.submit 'Edit', class: "btn btn-primary" %>
   </div>
-
-  <%= f.submit %>
-
 <% end %>

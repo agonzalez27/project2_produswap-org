@@ -1,7 +1,14 @@
-<h1>Edit Swap</h1>
+<div id="editSwap">
+Edit Swap
+</div>
 
 <%= render 'form'  %>
 
-<%= link_to "Delete Post!", ([current_user, @post]), method: :delete, data: {confirm: "Sure delete Post?"} %>
-
-<%= link_to "Back to Posts", user_posts_path %>
+<div id="editDeleteBack">
+<div id="editDelete">
+<%= link_to "Delete Swap", ([current_user, @post]), method: :delete, data: {confirm: "Sure delete Post?"} %>
+</div>
+<div id="editBack">
+<%= link_to "Back", user_post_path(current_user, @post) %>
+</div>
+</div>
