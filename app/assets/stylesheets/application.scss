@@ -10,10 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  body {
   text-align: center;
@@ -33,18 +33,18 @@
    background-color: none;
    color: rgba(255, 255, 255, 0.9);
    /*color: black;*/
-   font-size: 80px;
+   font-size: 100px;
    font-family: arial black;
-   margin-top: 20px;
+   margin-top: 120px;
    border: none;
  }
 
-/*navbar*/
+
  .navbar {
    height: 50px;
    width: 100px;
    display: inline-block;
-   font-size: 30px;
+   font-size: 25px;
    border: none;
  }
 
@@ -67,13 +67,14 @@
    width: 150px;
  }
 
- /*landing page*/
+
  #loginSignUpLanding {
   display: inline-block;
   border: none;
   width: 800px;
   height: 75px;
   background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 100px;
 }
 
 #loginLanding {
@@ -96,7 +97,7 @@
   height: auto;
 }
 
-/*log in page */
+
 #loginNav {
   display: inline-block;
   border: none;
@@ -141,4 +142,52 @@
 
 .loginPage {
   font-size: 30px;
+  border: none;
+}
+
+#signUpNew {
+  font-size: 60px;
+  color: blue;
+  border: none;
+  width: 300px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.signUpPage {
+  font-size: 30px;
+  border: none;
+}
+
+#loginBackNew {
+  display: inline-block;
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+  margin-top: 5px;
+}
+
+#loginNew {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-right: 30px;
+  width: 200px;
+  height: auto;
+}
+
+#backNew {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-right: 30px;
+  width: 200px;
+  height: auto;
 }
