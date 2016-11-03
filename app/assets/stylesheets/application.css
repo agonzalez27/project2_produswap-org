@@ -16,10 +16,11 @@
 
  body {
   text-align: center;
-  color: white;
-  background-color: green;
-  background-image: url(http://d3qibrsw27dlm.cloudfront.net/wp-content/uploads/2014/06/produce-3.jpg);
+  background-color: white;
+  background-image: url(produce.png);
+  background-size: cover;
  }
+
  div {
    height: auto;
    width: auto;
@@ -27,24 +28,70 @@
  }
 
  #aboutTitle {
-   background-color: red;
-   color: rgba(255, 255, 255, 0.8);
+   background-color: none;
+   color: rgba(255, 255, 255, 0.9);
    /*color: black;*/
-   font-size: 60px;
+   font-size: 80px;
    font-family: arial black;
+   margin-top: 20px;
+   border: none;
  }
 
-
+/*navbar*/
  .navbar {
    height: 50px;
    width: 100px;
    display: inline-block;
+   font-size: 30px;
+   border: none;
  }
 
  #nav {
-   display: inline-block;
+  display: inline-block;
+  background: radial-gradient(circle, rgba(255,255,255,.8) 70%, rgba(255,255,255,.5), rgba(255,255,255,0));
+  width: 1000px;
+  padding: 5px;
  }
 
  #welcome {
+   width: 200px;
+ }
+
+ #logout {
    width: 150px;
  }
+
+ #myProfile {
+   width: 150px;
+ }
+
+ /*landing page*/
+ #loginSignUpLanding {
+  display: inline-block;
+  border: none;
+  width: 800px;
+  height: 75px;
+  background: radial-gradient(circle, rgba(255,255,255,.8), rgba(255,255,255,.5), rgba(255,255,255,0));
+}
+
+#loginLanding {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-right: 30px;
+  width: 200px;
+  height: auto;
+  border-radius: 25px;
+}
+
+#signUpLanding {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  border: none;
+  margin-left: 30px;
+  width: 200px;
+  height: auto;
+  border-radius: 25px;
+}
