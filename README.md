@@ -27,7 +27,15 @@ A site where users can:
 In the future, I would like swappers to be able to rate each other.  I would also like to send either text or email notifications when someone replies to or sends a message.  If time allows, I will also allow users to upload photos of their produce.  
 
 ###Technologies Used
-HTML5, SCSS, Bootstrap, postgreSQL, BCrypt, PowerPoint, Heroku, GoDaddy, Photoshop Elements 11, Canon T3i, and Ruby on Rails.
+1.  HTML5 for creating elements and text in rails.
+2.	SCSS and Bootstrap for styling.
+3. For my database I used postgreSQL
+4. BCrypt allowed me to create user login and authentication.
+5. I used PowerPoint to create wireframes and my final ERD.
+6. Heroku is hosting the app.
+7. I bought the app's domain on GoDaddy.com. 
+8. I took the background images with a CanonT3i Camera and edited the photos using Photoshop Elements 11
+9. The language I used to write teh application was Ruby using Rails.  
 
 ###Installation Instructions
 1.  Go to https://github.com/agonzalez27/project2_produswap-org and download repository. 
@@ -52,5 +60,12 @@ HTML5, SCSS, Bootstrap, postgreSQL, BCrypt, PowerPoint, Heroku, GoDaddy, Photosh
 ###ERD
 ![ERD]( https://github.com/agonzalez27/project2_produswap-org/blob/master/markdown_assets/erd.JPG "ERD")
 
-###Unresolved Issues
+###Unresolved Issues and Next Steps
 There are currently no unresolved issues or bugs that I'm aware of.  
+
+I will work to add:
+	-A page where the user can see all messages.
+	-Admin capabilities.
+	-Email and/or text notifications.
+	-Allow users to upload photos of produce.
+	-A rating system where swappers can rate each other. 
